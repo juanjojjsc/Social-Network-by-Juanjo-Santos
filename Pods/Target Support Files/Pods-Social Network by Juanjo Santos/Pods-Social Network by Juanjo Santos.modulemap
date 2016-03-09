@@ -1,0 +1,6 @@
+framework module Pods_Social_Network_by_Juanjo_Santos {
+  umbrella header "Pods-Social Network by Juanjo Santos-umbrella.h"
+
+  export *
+  module * { export * }
+}

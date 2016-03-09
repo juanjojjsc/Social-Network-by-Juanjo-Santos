@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+            <string>Roboto-Bold</string>
+            <string>Roboto-Bold</string>
+            <string>Roboto-Bold</string>
+        </mutableArray>
+        <mutableArray key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Social_Network_by_Juanjo_Santos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +29,168 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2n5-Hw-JeM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In / Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8C-12-N70">
+                                        <rect key="frame" x="20" y="28" width="138" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="138" id="bki-Sb-99t"/>
+                                            <constraint firstAttribute="height" constant="21" id="cew-wJ-zEb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2021116338" green="0.75890844150000003" blue="0.93686868690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="9Hj-fV-JtL"/>
+                                    <constraint firstItem="T8C-12-N70" firstAttribute="top" secondItem="2n5-Hw-JeM" secondAttribute="top" constant="28" id="B9O-9g-Y66"/>
+                                    <constraint firstItem="T8C-12-N70" firstAttribute="leading" secondItem="2n5-Hw-JeM" secondAttribute="leading" constant="20" id="grd-xH-CYr"/>
+                                    <constraint firstItem="T8C-12-N70" firstAttribute="leading" secondItem="2n5-Hw-JeM" secondAttribute="leading" constant="20" id="jzN-1i-sdJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-98-wSu" customClass="StylishView" customModule="Social_Network_by_Juanjo_Santos" customModuleProvider="target">
+                                <rect key="frame" x="20" y="60" width="560" height="128"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rBb-rr-1Up">
+                                        <rect key="frame" x="20" y="10" width="520" height="108"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fblogo" translatesAutoresizingMaskIntoConstraints="NO" id="bsH-E8-GAg">
+                                                <rect key="frame" x="0.0" y="16" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="P9E-vf-CM5"/>
+                                                    <constraint firstAttribute="height" constant="75" id="TE1-VJ-YE7"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRh-6Y-Yuy" customClass="StylishButton" customModule="Social_Network_by_Juanjo_Santos" customModuleProvider="target">
+                                                <rect key="frame" x="105" y="36" width="415" height="35"/>
+                                                <color key="backgroundColor" red="0.20000000000000001" green="0.31764705879999999" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="GF6-Ar-h6b"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
+                                                <state key="normal" title="FACEBOOK LOGIN">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="cT9-7H-4Tc"/>
+                                    <constraint firstItem="rBb-rr-1Up" firstAttribute="top" secondItem="ONA-98-wSu" secondAttribute="top" constant="10" id="euB-rK-4HO"/>
+                                    <constraint firstItem="rBb-rr-1Up" firstAttribute="leading" secondItem="ONA-98-wSu" secondAttribute="leading" constant="20" id="f0S-L5-acM"/>
+                                    <constraint firstAttribute="trailing" secondItem="rBb-rr-1Up" secondAttribute="trailing" constant="20" id="wKc-gK-pwC"/>
+                                    <constraint firstAttribute="bottom" secondItem="rBb-rr-1Up" secondAttribute="bottom" constant="10" id="zfz-uq-z1c"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrL-F4-4UL" customClass="StylishView" customModule="Social_Network_by_Juanjo_Santos" customModuleProvider="target">
+                                <rect key="frame" x="20" y="208" width="560" height="372"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Login / Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acf-ej-k9W">
+                                        <rect key="frame" x="20" y="20" width="164" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="IGm-4F-Ndq"/>
+                                            <constraint firstAttribute="height" constant="21" id="V9A-Xj-boU"/>
+                                            <constraint firstAttribute="width" constant="164" id="c2c-9R-wZm"/>
+                                            <constraint firstAttribute="width" constant="138" id="vh1-oA-b4B"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="V9A-Xj-boU"/>
+                                                <exclude reference="vh1-oA-b4B"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wjR-WM-d6q" customClass="StylishTextField" customModule="Social_Network_by_Juanjo_Santos" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="61" width="520" height="35"/>
+                                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="iUp-E9-wHt"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pLX-Y2-Jsa" customClass="StylishTextField" customModule="Social_Network_by_Juanjo_Santos" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="116" width="520" height="35"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="GQn-dq-AeV"/>
+                                            <constraint firstAttribute="height" constant="35" id="ayR-VF-7TF"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4E-Do-Eet" customClass="StylishButton" customModule="Social_Network_by_Juanjo_Santos" customModuleProvider="target">
+                                        <rect key="frame" x="185" y="201" width="191" height="35"/>
+                                        <color key="backgroundColor" red="0.2021116338" green="0.75890844150000003" blue="0.93686868690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Tgf-bp-BnH"/>
+                                            <constraint firstAttribute="width" constant="191" id="UVp-oi-GhB"/>
+                                            <constraint firstAttribute="height" constant="35" id="qHs-6y-NPJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
+                                        <state key="normal" title="Login / Sign Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="qHs-6y-NPJ"/>
+                                            </mask>
+                                        </variation>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="pLX-Y2-Jsa" firstAttribute="top" secondItem="wjR-WM-d6q" secondAttribute="bottom" constant="20" id="3A3-Wb-cq3"/>
+                                    <constraint firstItem="Acf-ej-k9W" firstAttribute="top" secondItem="IrL-F4-4UL" secondAttribute="top" constant="20" id="5RN-Gt-cPv"/>
+                                    <constraint firstItem="pLX-Y2-Jsa" firstAttribute="leading" secondItem="wjR-WM-d6q" secondAttribute="leading" id="6cv-m5-opP"/>
+                                    <constraint firstAttribute="height" constant="128" id="7du-1c-dCU"/>
+                                    <constraint firstItem="Acf-ej-k9W" firstAttribute="leading" secondItem="IrL-F4-4UL" secondAttribute="leading" constant="20" id="LV5-3a-XKt"/>
+                                    <constraint firstAttribute="trailing" secondItem="pLX-Y2-Jsa" secondAttribute="trailing" constant="20" id="YtJ-2R-UDd"/>
+                                    <constraint firstItem="M4E-Do-Eet" firstAttribute="top" secondItem="pLX-Y2-Jsa" secondAttribute="bottom" constant="50" id="h60-4O-aU1"/>
+                                    <constraint firstItem="M4E-Do-Eet" firstAttribute="centerX" secondItem="IrL-F4-4UL" secondAttribute="centerX" id="irm-cV-muD"/>
+                                    <constraint firstAttribute="trailing" secondItem="wjR-WM-d6q" secondAttribute="trailing" constant="20" id="jn0-o1-o1O"/>
+                                    <constraint firstItem="wjR-WM-d6q" firstAttribute="leading" secondItem="Acf-ej-k9W" secondAttribute="leading" id="maH-Uu-Ahq"/>
+                                    <constraint firstItem="wjR-WM-d6q" firstAttribute="top" secondItem="Acf-ej-k9W" secondAttribute="bottom" constant="20" id="pqA-sK-y0W"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7du-1c-dCU"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2n5-Hw-JeM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3pI-p3-ygP"/>
+                            <constraint firstItem="ONA-98-wSu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GRL-8q-TgX"/>
+                            <constraint firstItem="IrL-F4-4UL" firstAttribute="top" secondItem="ONA-98-wSu" secondAttribute="bottom" constant="20" id="JuU-Pd-MlJ"/>
+                            <constraint firstItem="IrL-F4-4UL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Q2p-l8-QAB"/>
+                            <constraint firstItem="ONA-98-wSu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="Twf-vX-kWn"/>
+                            <constraint firstItem="ONA-98-wSu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Wxu-hg-Gna"/>
+                            <constraint firstAttribute="trailing" secondItem="2n5-Hw-JeM" secondAttribute="trailing" id="Ym1-9c-59U"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IrL-F4-4UL" secondAttribute="bottom" constant="20" id="fLI-bc-51C"/>
+                            <constraint firstItem="IrL-F4-4UL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gWA-1m-WlF"/>
+                            <constraint firstItem="2n5-Hw-JeM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uAm-9T-GzU"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="387"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fblogo" width="256" height="256"/>
+    </resources>
 </document>
