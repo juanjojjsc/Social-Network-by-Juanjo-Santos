@@ -11,6 +11,7 @@
             <string>Roboto-Bold</string>
             <string>Roboto-Bold</string>
             <string>Roboto-Bold</string>
+            <string>Roboto-Bold</string>
         </mutableArray>
         <mutableArray key="Roboto-Regular.ttf">
             <string>Roboto-Regular</string>
@@ -193,7 +194,7 @@
                     <connections>
                         <outlet property="emailField" destination="wjR-WM-d6q" id="AAv-Ic-Nyc"/>
                         <outlet property="passwordField" destination="pLX-Y2-Jsa" id="EfK-Rn-Tx2"/>
-                        <segue destination="a6q-Jy-AwJ" kind="show" identifier="loggedIn" id="5mh-Fh-EHz"/>
+                        <segue destination="p3Y-in-uTa" kind="show" identifier="loggedIn" id="5mh-Fh-EHz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -211,15 +212,82 @@
                     <view key="view" contentMode="scaleToFill" id="DeW-jU-n1M">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="384" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mVW-ZM-sTI">
+                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="384" id="BNp-n8-Bpn">
+                                        <rect key="frame" x="0.0" y="92" width="560" height="384"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BNp-n8-Bpn" id="HHY-S1-6e7">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="383.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3J-rF-FEs" userLabel="Container">
+                                                    <rect key="frame" x="0.0" y="8" width="560" height="367.5"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pwK-al-Yws">
+                                                            <rect key="frame" x="8" y="8" width="57" height="57"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="demonslayer43" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1E-4w-9Iq">
+                                                            <rect key="frame" x="73" y="26" width="156" height="21"/>
+                                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                                            <color key="textColor" red="0.2021116338" green="0.75890844150000003" blue="0.93686868690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="AuZ-4b-unj">
+                                                            <rect key="frame" x="310" y="8" width="57" height="57"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="c3J-rF-FEs" firstAttribute="top" secondItem="HHY-S1-6e7" secondAttribute="topMargin" id="FWM-bn-Vht"/>
+                                                <constraint firstItem="c3J-rF-FEs" firstAttribute="bottom" secondItem="HHY-S1-6e7" secondAttribute="bottomMargin" id="yWf-qF-S3n"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.61960784310000006" green="0.0" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.2021116338" green="0.75890844150000003" blue="0.93686868690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bpj-Ww-Lhd" firstAttribute="top" secondItem="mVW-ZM-sTI" secondAttribute="bottom" id="HEt-Kb-hIi"/>
+                            <constraint firstItem="mVW-ZM-sTI" firstAttribute="top" secondItem="VzG-km-VZy" secondAttribute="bottom" id="SE2-n5-AZZ"/>
+                            <constraint firstItem="mVW-ZM-sTI" firstAttribute="leading" secondItem="DeW-jU-n1M" secondAttribute="leadingMargin" id="ho2-59-MXK"/>
+                            <constraint firstItem="mVW-ZM-sTI" firstAttribute="trailing" secondItem="DeW-jU-n1M" secondAttribute="trailingMargin" id="quG-OE-D0l"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="CXc-RM-Jeg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDK-IU-2Xc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1775" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nuk-v8-Skm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p3Y-in-uTa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lJz-n0-Jkc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="a6q-Jy-AwJ" kind="relationship" relationship="rootViewController" id="pGA-75-3Fc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SdL-hU-kr3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="963" y="387"/>
         </scene>
     </scenes>
     <resources>
         <image name="fblogo" width="256" height="256"/>
+        <image name="heart" width="600" height="576"/>
     </resources>
 </document>
