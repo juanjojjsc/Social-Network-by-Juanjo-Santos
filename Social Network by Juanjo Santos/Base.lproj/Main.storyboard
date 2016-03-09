@@ -21,7 +21,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Social_Network_by_Juanjo_Santos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Social_Network" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -52,7 +52,7 @@
                                     <constraint firstItem="T8C-12-N70" firstAttribute="leading" secondItem="2n5-Hw-JeM" secondAttribute="leading" constant="20" id="jzN-1i-sdJ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-98-wSu" customClass="StylishView" customModule="Social_Network_by_Juanjo_Santos" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-98-wSu" customClass="StylishView" customModule="Social_Network" customModuleProvider="target">
                                 <rect key="frame" x="20" y="60" width="560" height="128"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rBb-rr-1Up">
@@ -65,7 +65,7 @@
                                                     <constraint firstAttribute="height" constant="75" id="TE1-VJ-YE7"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRh-6Y-Yuy" customClass="StylishButton" customModule="Social_Network_by_Juanjo_Santos" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRh-6Y-Yuy" customClass="StylishButton" customModule="Social_Network" customModuleProvider="target">
                                                 <rect key="frame" x="105" y="36" width="415" height="35"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.31764705879999999" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -75,6 +75,9 @@
                                                 <state key="normal" title="FACEBOOK LOGIN">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="fbButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DYP-XX-Hal"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -88,7 +91,7 @@
                                     <constraint firstAttribute="bottom" secondItem="rBb-rr-1Up" secondAttribute="bottom" constant="10" id="zfz-uq-z1c"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrL-F4-4UL" customClass="StylishView" customModule="Social_Network_by_Juanjo_Santos" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrL-F4-4UL" customClass="StylishView" customModule="Social_Network" customModuleProvider="target">
                                 <rect key="frame" x="20" y="208" width="560" height="372"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Login / Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acf-ej-k9W">
@@ -109,7 +112,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wjR-WM-d6q" customClass="StylishTextField" customModule="Social_Network_by_Juanjo_Santos" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wjR-WM-d6q" customClass="StylishTextField" customModule="Social_Network" customModuleProvider="target">
                                         <rect key="frame" x="20" y="61" width="520" height="35"/>
                                         <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -117,9 +120,9 @@
                                         </constraints>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pLX-Y2-Jsa" customClass="StylishTextField" customModule="Social_Network_by_Juanjo_Santos" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pasword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pLX-Y2-Jsa" customClass="StylishTextField" customModule="Social_Network" customModuleProvider="target">
                                         <rect key="frame" x="20" y="116" width="520" height="35"/>
                                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -128,9 +131,9 @@
                                         </constraints>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4E-Do-Eet" customClass="StylishButton" customModule="Social_Network_by_Juanjo_Santos" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4E-Do-Eet" customClass="StylishButton" customModule="Social_Network" customModuleProvider="target">
                                         <rect key="frame" x="185" y="201" width="191" height="35"/>
                                         <color key="backgroundColor" red="0.2021116338" green="0.75890844150000003" blue="0.93686868690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -147,6 +150,9 @@
                                                 <exclude reference="qHs-6y-NPJ"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ydK-HS-4hp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -184,10 +190,33 @@
                             <constraint firstItem="2n5-Hw-JeM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uAm-9T-GzU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="wjR-WM-d6q" id="AAv-Ic-Nyc"/>
+                        <outlet property="passwordField" destination="pLX-Y2-Jsa" id="EfK-Rn-Tx2"/>
+                        <segue destination="a6q-Jy-AwJ" kind="show" identifier="loggedIn" id="5mh-Fh-EHz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="387"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eYk-KL-7gT">
+            <objects>
+                <viewController id="a6q-Jy-AwJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VzG-km-VZy"/>
+                        <viewControllerLayoutGuide type="bottom" id="bpj-Ww-Lhd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DeW-jU-n1M">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.2021116338" green="0.75890844150000003" blue="0.93686868690000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iDK-IU-2Xc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="963" y="387"/>
         </scene>
     </scenes>
     <resources>

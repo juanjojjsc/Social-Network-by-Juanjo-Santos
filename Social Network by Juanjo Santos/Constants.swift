@@ -15,3 +15,17 @@ import UIKit
 //COLORS
 let SHADOW_COLOR: Float = 157.0/255.0
 
+//LOGIN KEYS (Firebase)
+let KEY_UID = "uid"
+
+
+//SEGUES
+let SEGUE_LOGGED_IN = "loggedIn"
+
+
+//ERRORES DE FIREBASE
+//nos conviene que todos empiecen con STATUS por el autocomplete
+let STATUS_ACCOUNT_NOEXIST = -8
+
+
+
