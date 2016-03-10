@@ -61,8 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8190E0791C8FACA300E9751E /* Bolts.framework in Frameworks */,
 				8190E07A1C8FACA300E9751E /* FBSDKCoreKit.framework in Frameworks */,
+				8190E0791C8FACA300E9751E /* Bolts.framework in Frameworks */,
 				8190E07B1C8FACA300E9751E /* FBSDKLoginKit.framework in Frameworks */,
 				3D48276BEEF03127DC5B5F90 /* Pods_Social_Network_by_Juanjo_Santos.framework in Frameworks */,
 			);
@@ -464,6 +464,11 @@
 					by,
 					Juanjo,
 					Santos,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					by,
+					Juanjo,
+					Santos,
 				);
 				INFOPLIST_FILE = "Social Network by Juanjo Santos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -480,6 +485,11 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Social",
+					Network,
+					by,
+					Juanjo,
+					Santos,
 					"$(PROJECT_DIR)/Social",
 					Network,
 					by,
