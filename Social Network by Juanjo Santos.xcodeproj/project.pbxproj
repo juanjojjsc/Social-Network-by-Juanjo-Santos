@@ -24,6 +24,8 @@
 		8190E07A1C8FACA300E9751E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8190E0771C8FACA300E9751E /* FBSDKCoreKit.framework */; };
 		8190E07B1C8FACA300E9751E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8190E0781C8FACA300E9751E /* FBSDKLoginKit.framework */; };
 		8190E07E1C8FBA4800E9751E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8190E07D1C8FBA4800E9751E /* DataService.swift */; };
+		819640C01C90A85D00AA6047 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819640BF1C90A85D00AA6047 /* FeedViewController.swift */; };
+		819640C21C90B3D500AA6047 /* StylishPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819640C11C90B3D500AA6047 /* StylishPostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		8190E0771C8FACA300E9751E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		8190E0781C8FACA300E9751E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		8190E07D1C8FBA4800E9751E /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		819640BF1C90A85D00AA6047 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		819640C11C90B3D500AA6047 /* StylishPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylishPostTableViewCell.swift; sourceTree = "<group>"; };
 		E8251DC9E333EF1EC3D20F65 /* Pods-Social Network by Juanjo Santos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Network by Juanjo Santos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social Network by Juanjo Santos/Pods-Social Network by Juanjo Santos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,8 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8190E07A1C8FACA300E9751E /* FBSDKCoreKit.framework in Frameworks */,
 				8190E0791C8FACA300E9751E /* Bolts.framework in Frameworks */,
+				8190E07A1C8FACA300E9751E /* FBSDKCoreKit.framework in Frameworks */,
 				8190E07B1C8FACA300E9751E /* FBSDKLoginKit.framework in Frameworks */,
 				3D48276BEEF03127DC5B5F90 /* Pods_Social_Network_by_Juanjo_Santos.framework in Frameworks */,
 			);
@@ -103,7 +107,6 @@
 				8190E0631C8F99D700E9751E /* View */,
 				8190E0621C8F99D000E9751E /* Controller */,
 				8190E0501C8F99BA00E9751E /* AppDelegate.swift */,
-				8190E0521C8F99BA00E9751E /* ViewController.swift */,
 				8190E0541C8F99BA00E9751E /* Main.storyboard */,
 				8190E0571C8F99BA00E9751E /* Assets.xcassets */,
 				8190E0591C8F99BA00E9751E /* LaunchScreen.storyboard */,
@@ -115,6 +118,8 @@
 		8190E0621C8F99D000E9751E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8190E0521C8F99BA00E9751E /* ViewController.swift */,
+				819640BF1C90A85D00AA6047 /* FeedViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				8190E06C1C8F9CDB00E9751E /* StylishView.swift */,
 				8190E0711C8FA28A00E9751E /* StylishButton.swift */,
 				8190E0731C8FA70500E9751E /* StylishTextField.swift */,
+				819640C11C90B3D500AA6047 /* StylishPostTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -309,9 +315,11 @@
 				8190E0741C8FA70500E9751E /* StylishTextField.swift in Sources */,
 				8190E07E1C8FBA4800E9751E /* DataService.swift in Sources */,
 				8190E06D1C8F9CDB00E9751E /* StylishView.swift in Sources */,
+				819640C21C90B3D500AA6047 /* StylishPostTableViewCell.swift in Sources */,
 				8190E0531C8F99BA00E9751E /* ViewController.swift in Sources */,
 				8190E0511C8F99BA00E9751E /* AppDelegate.swift in Sources */,
 				8190E0721C8FA28A00E9751E /* StylishButton.swift in Sources */,
+				819640C01C90A85D00AA6047 /* FeedViewController.swift in Sources */,
 				8190E0701C8F9D3000E9751E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +445,11 @@
 					by,
 					Juanjo,
 					Santos,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					by,
+					Juanjo,
+					Santos,
 				);
 				INFOPLIST_FILE = "Social Network by Juanjo Santos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -453,6 +466,11 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Social",
+					Network,
+					by,
+					Juanjo,
+					Santos,
 					"$(PROJECT_DIR)/Social",
 					Network,
 					by,
