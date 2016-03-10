@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Social Network by Juanjo Santos/Alamofire.framework"
   install_framework "Pods-Social Network by Juanjo Santos/Firebase.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Social Network by Juanjo Santos/Alamofire.framework"
   install_framework "Pods-Social Network by Juanjo Santos/Firebase.framework"
 fi

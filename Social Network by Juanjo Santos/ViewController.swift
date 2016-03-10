@@ -67,6 +67,11 @@ class ViewController: UIViewController {
                     } else {
                         print("Logramos conectarnos a Firebase. AuthData: \(authData)")
                         
+                        //Create a Firebase user with the Facebook auth Data
+                        
+                        let user = ["provider": authData.provider!]
+                        DataService.ds.createFirebaseUser(authData.uid, user: user)
+                        
                         //Save the log in to user defaults and perform the Segue
                         NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
                         self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: self)
@@ -120,7 +125,17 @@ class ViewController: UIViewController {
                                 
                                 //Now that we have registered, Log in
                                 
-                                DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: nil)
+                                DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: { err, authData in
+                                    
+                                    //Create the Firebase User with the email authData
+                                    let user = ["provider": authData.provider!]
+                                    DataService.ds.createFirebaseUser(authData.uid, user: user)
+                                    
+                                })
+                                
+                                
+                                
+                                
                                 
                                 self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                             }

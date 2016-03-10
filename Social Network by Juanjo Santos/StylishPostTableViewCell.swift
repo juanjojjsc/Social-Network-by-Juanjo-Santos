@@ -12,7 +12,11 @@ class StylishPostTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var descriptionText: UITextView!
+    @IBOutlet weak var likesLbl: UILabel!
     
+    var post: Post!
     
     
     override func awakeFromNib() {
@@ -28,12 +32,29 @@ class StylishPostTableViewCell: UITableViewCell {
     
     override func drawRect(rect: CGRect) {
         profilePic.layer.cornerRadius = profilePic.frame.size.width / 2
+        profilePic.clipsToBounds = true
+        
+        postImage.clipsToBounds = true
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    
+    // SUPERIMPORTANTE QUE HAGAMOS LA CONFIGURACION DE LA CELDA AQUI!!!! Y NO EN CELLFORROWATINDEXPATH
+    
+    func configureCell(recievedPost: Post) {
+        
+        self.post = recievedPost
+        
+        self.descriptionText.text = post.postDescription
+        
+        self.likesLbl.text = "\(post.likes)"
+        
+        
+        
+        
+        
     }
+    
+    
 
 }
